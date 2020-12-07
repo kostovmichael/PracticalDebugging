@@ -49,6 +49,7 @@ namespace Benchmarks.Serializers
         public void RunSystemTextJson()
         {
             _memoryStream.Position = 0;
+            _utf8JsonWriter.Reset();
             JsonSerializer.Serialize(_utf8JsonWriter, _instance);
         }
 

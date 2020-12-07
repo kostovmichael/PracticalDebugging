@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos
+namespace PracticalDebuggingDemos
 {
     public abstract class DemoBase : MVVMC.BaseViewModel
     {
@@ -31,6 +31,12 @@ namespace PracticalDebugingDemos
             get { return _content; }
             set { _content = value; OnPropertyChanged();}
         }
+
+        public void ClearContent()
+        {
+            Content = null;
+        }
+
 
         public void AppendTextToContent(object text)
         {

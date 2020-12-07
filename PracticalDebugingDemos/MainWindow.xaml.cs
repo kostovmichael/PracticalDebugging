@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PracticalDebugingDemos
+namespace PracticalDebuggingDemos
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,5 +25,12 @@ namespace PracticalDebugingDemos
             InitializeComponent();
         }
 
+        private void ComboBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;// FindParent<ComboBox>(cp);
+            cmb.IsDropDownOpen = true;
+        }
+
     }
+
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Files
+namespace PracticalDebuggingDemos.Demos.Files
 {
     public class ReadOneFile : DemoBase
     {
@@ -13,6 +13,7 @@ namespace PracticalDebugingDemos.Demos.Files
         {
             var files = Directory.GetFiles(@"C:\Windows");
             ReadFirstFile(files);
+            AppendTextToContent("Finished");
         }
 
         private void ReadFirstFile(string[] files)
